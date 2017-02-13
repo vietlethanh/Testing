@@ -1,0 +1,52 @@
+.enroll-rewards-form{
+	font-size: 22px;
+	color: $txt-color;
+	font-weight: bold;
+	.form-inputs{
+		background:rgba(255,255,255,0.7);
+		border-radius: 8px;
+		padding-right: 30px;
+		padding-left: 46px;
+		a.term-cond{color: #6183a9; text-decoration: none;}
+		.chk-agree{color: black; font-size: 14px;}
+	}
+	.form-message{
+		text-align: center;
+		font-weight: bold; 
+		font-size: 26px;
+		margin-top: 10px;
+		p {
+			margin-bottom:  0px;
+		}
+	}
+	.warning-message{
+		margin-top:6px;
+	}
+	.benefits-message{
+		margin-top: -12px;
+		font-weight: normal;
+	}
+	.benefits-list{
+		margin-bottom: 10px; margin-top: -10px;
+		font-weight: normal;
+	}
+	.list-style-normal{
+		list-style: initial; margin-left: 20px;
+	}
+	.no-line-height{
+		line-height: 1.3;
+	}
+	.note-message{
+		margin-top: -6px;
+		font-size: 16px;
+	}
+	.button-thank{
+		width: 44% !important;
+	}
+	.button-group, .right{
+		padding-right: 0;
+	}
+	.savemart-link{
+		text-decoration: underline; font-weight: bold; color: black;
+	}
+}

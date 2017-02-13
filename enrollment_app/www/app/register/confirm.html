@@ -1,0 +1,43 @@
+<div class="list account-list" id="confirmcard">
+	<div class="item item-button-right">
+		<div class="label">Email</div>
+		<div class="value">{{user.Email}}</div>
+		<button class="button button-positive button-small" ng-click="editAccount()">Edit</button>
+	</div>
+	<div class="item item-button-right">
+		<div class="label">Name</div>
+		<div class="value">{{user.FirstName}} {{user.MiddleName}} {{user.LastName}}</div>
+		<button class="button button-positive button-small" ng-click="editAccount()">Edit</button>
+	</div>
+	<div class="item item-button-right">
+		<div class="label">Primary Phone/AltID</div>
+		<div class="value">
+			<a href="tel:{{user.Phone}}">{{user.Phone | tel}}</a>
+			<ion-checkbox ng-disabled="true" ng-model="user.PhoneIsCellPhone">This is a Mobile number</ion-checkbox>
+		</div>
+		<button class="button button-positive button-small" ng-click="editAccount()">Edit</button>
+	</div>
+	<div class="item item-button-right">
+		<div class="label">Password</div>
+		<div class="value">**********</div>
+		<button class="button button-positive button-small" ng-click="editAccount()">Edit</button>
+	</div>
+	<div class="item item-button-right">
+		<div class="label">Preferred Store</div>
+		<div class="value" ng-if="chooseStore">{{chooseStore.StoreName}}<br/>{{chooseStore.Address1}}, {{chooseStore.City}} {{chooseStore.State}}<br/>{{chooseStore.Zipcode}}</div>
+		<button class="button button-positive button-small" ng-click="changeStore()">Edit</button>
+	</div>
+	<div class="row">	
+		<div class="col footer-message">
+				<span class="message">By registering an account with us, <br/>
+				you agree to our <a ng-click="openTermLink()"> Terms of Use</a></span>
+		</div>
+	</div>
+	<div class="row" >	
+		<div class="col center">
+			<button class="button button-long button-positive" type="button" ng-click="create()">
+				Create Account
+			</button>
+		</div>
+	</div>
+</div>

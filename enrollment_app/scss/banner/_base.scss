@@ -1,0 +1,67 @@
+.app-enroll, .app-cardmode{
+	.bar-stable{
+		display: none;
+	}
+	.pane{
+		background: $main-background;
+	}
+}
+.app-enroll-store, .app-register, .app-registercard{
+	.pane{
+		background: #fff;
+	}
+	.bar.bar-stable{
+		background: $luck_red;
+	}
+}
+.app-register, .app-registercard{
+	.button.back-button.hide{
+		display: block;
+	}
+}
+.banner{
+	button.button-large{	
+		border-width: 1px;
+		border-style: solid;
+		border-radius: 10px;
+		vertical-align: top;
+		text-overflow: ellipsis;
+		font-weight: normal;
+		font-size: 30px;
+	}
+}
+.mcm-icon-list:before{
+	background-image: url('../img/mcm-icon-list.png');
+	background-size: 100%;
+	content: "";
+	width:24px;
+	height:34px;
+	background-repeat: no-repeat;
+}
+.bar.bar-stable {
+	background: $main-background;
+}
+.list {
+	.item-divider {
+		color: white;
+		background-color: $secondbar_bg;
+	}
+}
+
+.search-form {
+	.button, input{
+		color: $secondbar_btn_text_color
+	}
+	label, input {
+		background: $secondbar_bg;
+	}
+	input {
+		border: 1px solid $secondbar_btn_text_color;
+	}
+}
+.popup .button-default {
+	border-color: #abaeb0;
+    background-color: #c5c7c9;
+    color: #fff;
+}
+	

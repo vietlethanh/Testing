@@ -1,0 +1,16 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.0.1"
+  },
+  "dependencies": {
+    "font-awesome": "~4.3.0",
+    "lodash": "~3.10.0",
+    "AngularJS-Toaster": "~0.4.15",
+    "angular-cache": "~4.3.2",
+    "angular-google-maps": "~2.1.5",
+    "angular-ui-utils": "~3.0.0",
+    "ionic-filter-bar": "~1.0.4"
+  }
+}

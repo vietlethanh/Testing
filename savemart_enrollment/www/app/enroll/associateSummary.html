@@ -1,0 +1,120 @@
+<form id="enrollForm" name="enrollForm" novalidate ng-submit="createUser()" class="summary-form enroll-confirminfo-form" action="">
+	<div class="form-inputs">
+		<div class="row">
+			<div class="col form-message">
+				<p class="no-margin-bottom">{{enrollInfo.FirstName}}, please review the information below<br/>
+					and confirm that it is correct.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-33 col-label">Employee ID #: </div>
+			<div class="col col-67 col-label">
+				{{enrollInfo.AssociateId}}
+				<input type="hidden" ng-model="enrollInfo.AssociateId" required/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-33 col-label">Name: </div>
+			<div class="col col-20">
+				<label class="item item-input">
+					<input type="text" name="firstName" ng-model="enrollInfo.FirstName" required/>
+			  	</label>
+			 </div>
+			<div class="col col-20">
+				<label class="item item-input">
+					<input type="text" name="middleName" ng-model="enrollInfo.MiddleName"/>
+			  	</label>
+			</div>
+			<div class="col col-26">
+				<label class="item item-input">
+					<input type="text" name="lastName" ng-model="enrollInfo.LastName" required/>
+			  	</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-33 col-label">Address: </div>
+			<div class="col col-67 ">
+				<label class="item item-input">
+					{{enrollInfo.Address}}
+					<input type="hidden" ng-model="enrollInfo.Address" required/>
+			  	</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-33 col-label">City: </div>
+			<div class="col col-67">
+				<label class="item item-input">
+					{{enrollInfo.City}}
+					<input type="hidden" ng-model="enrollInfo.City" required/>
+			  	</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-33 col-label">State: </div>
+			<div class="col col-40">
+				<label class="item item-input">
+					{{enrollInfo.SelectedState.text}}
+					<input type="hidden" ng-model="enrollInfo.SelectedState.text" required/>
+			  	</label>
+			</div>
+			<div class="col col-label col-zip-label col-10">Zip: </div>
+			<div class="col col-15">
+				<label class="item item-input">
+					{{enrollInfo.ZipCode}}
+					<input type="hidden" ng-model="enrollInfo.ZipCode" required/>
+			  	</label>
+		  	</div>
+		</div>
+		<div class="row">
+			<div class="col col-33 col-label">Phone/Alt. ID: </div>
+			<div class="col col-67">
+				<label class="item item-input ">
+					<!--{{enrollInfo.Phone | tel}}-->
+					<input type="tel" name="phone" ng-model="enrollInfo.Phone" required ui-mask="(999)999-9999"/>
+			  	</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-33 col-label">Email Address: </div>
+			<div class="col col-67">
+				<label class="item item-input">
+					<input type="email" name="email" ng-model="enrollInfo.Email" autocapitalize="off"/>
+			  	</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-33 col-label">Password: </div>
+			<div class="col col-67 col-label">
+				Xxxxxxx
+				<input type="hidden" ng-model="enrollInfo.Password" required/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-33 col-label">My Preferred Store: </div>
+			<div class="col col-67">
+				{{preferredStore}}
+				<input type="hidden" ng-model="preferredStore" required/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-33 col-label">Rewards Member #: </div>
+			<div class="col col-25 col-label">
+				{{enrollInfo.SRCardID}}
+			</div>
+			<div class="col col-checkbox">
+				<ion-checkbox class="chk-agree" name="agree" ng-model="enrollInfo.Agree" required ng-false-value="">
+				</ion-checkbox>
+			</div>
+			<div class="col col-40 term-cond">I agree to the <a class="term-cond" ng-click="openTermModal()">terms & conditions</a></div>
+		</div>
+	</div>
+	<div class="form-footer">
+		<div class="row button-group">
+			<div class="col right">
+				<button type="button" class="button button-stable" ng-click="back()">Back</button>
+				<button type="submit" class="button button-stable" ng-disabled="enrollForm.$invalid">Information Correct</button>
+			</div>
+		</div>
+	</div>
+</form>

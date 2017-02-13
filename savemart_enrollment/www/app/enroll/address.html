@@ -1,0 +1,41 @@
+<form id="enrollForm" name="enrollForm" novalidate ng-submit="saveAddress()" class="enroll-address-form" action="">
+	<div class="list">
+		<label class="item item-input">
+			<input type="text" name="address" ng-model="enrollInfo.Address" placeholder="Address" required ng-pattern="addressRegx"/>
+	  	</label>
+	  	<span class="help-block" ng-show="showInvalid && enrollForm.address.$error.required">This field is required</span>
+		<span class="help-block" ng-show="showInvalid && enrollForm.address.$error.pattern">This field dose not allow special characters</span>
+	  	<div class="row no-padding">
+			<div class ="col col-50">
+		  		<label class="item item-input">
+					<input type="text" name="city" ng-model="enrollInfo.City" placeholder="City" required ng-pattern="addressRegx"/>
+			  	</label>
+			  	<span class="help-block" ng-show="showInvalid && enrollForm.city.$error.required">This field is required</span>
+				<span class="help-block" ng-show="showInvalid && enrollForm.city.$error.pattern">This field dose not allow special characters</span>
+		  	</div>
+		  	<div class="col">
+		  		<div class="list">
+		  		  	<label class="item item-input lb-select-box">
+		  		    	<select name="states" class="state-list" ng-model="enrollInfo.SelectedState" ng-options="state.text for state in stateList" required>
+		  		    	</select>
+		  		  	</label>
+					<span class="help-block" ng-show="showInvalid && enrollForm.states.$error.required">This field is required</span>
+		  		</div>
+			  </div>
+			<div class ="col">
+		  		<label class="item item-input">
+					<input type="text" ng-model="enrollInfo.ZipCode" name="zipCode" placeholder="Zip Code" ui-mask="99999" required/>
+				</label>
+				<span class="help-block" ng-show="showInvalid && enrollForm.zipCode.$error.required">This field is required</span>
+				<span class="help-block" ng-show="showInvalid && enrollForm.zipCode.$error.mask">Zip code is invalid</span>
+			</div>
+		</div>
+	</div>
+	<!-- End list -->
+	<div class="row button-group">
+		<div class="col right">
+			<button type="button"class="button button-stable" ng-click="back()">Back</button>
+			<button type="submit" class="button button-stable" ng-disabled="enrollForm.$invalid">Next</button>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,200 @@
+body, .ionic-body {
+	color: white;
+}
+.bar.bar-stable {
+	border: none;
+	.button.button-icon{
+		color: transparent;
+	}
+}
+.hide-logo ~ ion-side-menus {
+	.bar.bar-stable {
+		background: transparent;
+	}
+	.pane {
+		background: $main-background;
+	}
+}
+.pane{
+	background-color: $main-background;
+}
+.has-header{
+	top: 105px;	
+}
+.col-40 {
+  @include flex(0, 0, 40%);
+  max-width: 40%;
+}
+.col-60 {
+  @include flex(0, 0, 60%);
+  max-width: 60%;
+}
+.col-26 {
+  @include flex(0, 0, 26%);
+  max-width: 26%;
+}
+.col-checkbox {
+  @include flex(0, 0, 60px);
+  max-width: 60px;
+}
+.p-large {
+	font-size: $font-size-large;
+	line-height: 1.2;
+}
+.p-base {
+	font-size: $font-size-base;
+}
+.center {
+	text-align: center;
+}
+.right {
+	text-align: right;
+}
+.button-text-left {
+	text-align: left;
+}
+
+/* form */
+.item-input {
+	border-radius: $base-border-radius;
+	opacity: 0.8;
+	margin-top: 20px;
+}
+.item-checkbox {
+	background: transparent;
+	border: none;
+	color: white;
+	font-size: $font-size-small;
+	padding-left: 60px;
+	min-height: 53px;
+	.item-content {
+		white-space: normal;
+	}
+	.checkbox-icon {
+		width: 45px;
+		height: 45px;
+	}
+	.checkbox {
+		top: 36%;
+	}
+}
+.checkbox {
+	input:before, .checkbox-icon:before {
+		border-radius: 8px;
+	}
+	input:checked:before,  input:checked + .checkbox-icon:before {
+		background: #FFF;
+	}
+	input:before, .checkbox-icon:before {
+		border-color: #FFF;
+
+	}
+}
+.checkbox input:after,
+.checkbox-icon:after {
+	 @include rotate(0deg);
+	 color: black;
+	font-family: mcm;
+	font-size: 30px;
+	top: 0%;
+	left: 15%;
+	content: 'A';
+	border: none;
+}
+.button-group {
+	.button {
+		width: 145px;
+		font-size: $font-size-base;
+		font-weight: bold;
+	}
+	.item-checkbox {
+		padding-top: 0px;
+		.checkbox {
+			top: 26%;
+			padding-left: 0px;
+			left: 0px;
+		}
+	}
+}
+.help-block {
+	color: red;
+	font-size: $font-size-small;
+	white-space: normal;
+	@include flex(0, 0, 100%);
+	line-height: 1;
+	font-weight: bold;
+}
+.small_txt {
+	font-size: $font-size-small;
+}
+form {
+	.list {
+		margin-bottom: 10px;	
+	}
+}
+/* end form */
+
+.popup {
+	color: #000;
+}
+.popup-container 
+{
+	.popup{
+		width: auto !important; max-width: 50%;
+	}
+	.popup-body{
+		text-align: center;
+	}
+}
+.modal-wrapper {
+	color: $txt-color;
+
+	.bar {
+		height: $modal-bar-height;
+		.title {
+			height: $modal-bar-height;
+			line-height: $modal-bar-height;
+		}
+	}
+	.has-header {
+		top: $modal-bar-height;
+	}
+}
+
+.savemart-banner{
+	.pane {
+		background: $savemart-background;
+		-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	}
+	.bar.bar-stable {
+		background: $savemart-logo;
+		border: none;
+	}
+	color: $savemart-main-txt-color;
+	.item-checkbox {
+		color: $savemart-main-txt-color;
+	}
+	.help-block{
+		text-shadow: 1px 1px 2px #222222;
+	}
+}
+.lucky-banner{
+	.pane {
+		background: $lucky-background;
+		-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	}
+	.bar.bar-stable {
+		background: $lucky-logo;
+		border: none;
+	}
+	color: $lucky-main-txt-color;
+	.item-checkbox {
+		color: $lucky-main-txt-color;
+	}
+}

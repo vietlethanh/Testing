@@ -1,0 +1,76 @@
+.summary-form {
+	color: $txt-color;
+	font-size: 20px;
+	font-weight: bold;
+	.form-inputs{
+		background:rgba(255,255,255,0.7);
+		border-radius: 8px;
+		padding-right: 30px;
+		padding-left: 46px;
+		div.term-cond{
+			font-size: 14px;
+			a.term-cond{color: #6183a9; text-decoration: none;}
+		}
+		.chk-agree{color: black; font-size: 14px;}
+	}
+	.form-message{
+		text-align: center;
+		font-weight: bold; 
+		font-size: 26px;
+		margin-top: 10px;
+		p {
+			margin-bottom:  0px;
+		}
+	}
+	.col {
+		padding-top: 0px;
+	}
+	
+	.col-label{
+		font-size: 20px;
+		font-weight: bold;
+		
+	}
+	.col-zip-label	{
+		padding-left: 0px;
+		text-align: right;
+		padding-right: 5px;
+	}
+	label.item-input {
+		background: #fff;
+		min-height: 38px;
+		margin-top: 0px;
+		font-size: 20px;
+		color: $txt-color;
+		font-weight: bold;
+	}
+	
+	input{
+		height: inherit;
+	}
+
+	.button-group .button{
+		width: auto;
+	}
+	.item-checkbox {
+		font-size: $font-size-small;
+		font-weight: bold;
+		padding-left: 55px;
+		padding-top: 10px;
+		min-height: 40px;
+		.checkbox-icon {
+			width: 35px;
+			height: 35px;
+		}
+		.checkbox {
+			top: 36%;
+		}
+	}
+	
+	.checkbox input:after,
+	.checkbox-icon:after {
+		font-size: 24px;
+		top: 0%;
+		left: 15%;
+	}
+}

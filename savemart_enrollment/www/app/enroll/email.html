@@ -1,0 +1,25 @@
+<form id="enrollForm" name="enrollForm" novalidate ng-submit="checkUserExists()" action="">
+	<div class="list">
+		<label class="item item-input">
+			<input type="email" placeholder="Enter Your Email Address" name="email" ng-model="enrollInfo.Email" required  server-validate autocapitalize="off" ng-pattern="emailRegx"/>
+	  	</label>
+	  	<span class="help-block" ng-show="showInvalid && enrollForm.email.$error.required">This field is required</span>
+	  	<span class="help-block" ng-show="showInvalid && enrollForm.email.$error.pattern">Not a valid email format</span>
+	  	<span class="help-block" ng-show="!enrollForm.email.$error.pattern && showInvalid && enrollForm.email.$error.email">Not a valid email format</span>
+	  	<span class="help-block" ng-if="enrollForm.email.$error.server">{{e_msges.email}}</span>
+	  	<label class="item item-input">
+			<input type="email" placeholder="Confirm Email Address" name="confirmEmail" ng-model="enrollInfo.ConfirmEmail" required match="enrollInfo.Email" autocapitalize="off"/>
+	  	</label>
+	  	<span class="help-block" ng-show="showInvalid && enrollForm.confirmEmail.$error.required">This field is required</span>
+	  	<span class="help-block" ng-show="showInvalid && enrollForm.confirmEmail.$error.match">Emails do not match</span>
+	</div>
+	<div class="row button-group">
+		<div class="col col-60" >
+			<ion-checkbox ng-model="enrollInfo.ReceiveEmail" >YES, I’d like to receive emails with special offers, savings, and information.</ion-checkbox>
+		</div>
+		<div class="col right">
+			<button type="button"class="button button-stable" ng-click="back()">Back</button>
+			<button type="submit" class="button button-stable" ng-disabled="enrollForm.$invalid">Next</button>
+		</div>
+	</div>
+</form>

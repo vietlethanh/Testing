@@ -1,0 +1,29 @@
+$bar-stable-bg: transparent;
+$bar-stable-border: none;
+
+$font-size-base:                  24px !default;
+$font-size-large:                 30px !default;
+$font-size-small:                 18px !default;
+$bar-height:                      105px !default;
+$modal-bar-height: 				  44px !default;
+$txt-color: #0e0d0c;
+$base-border-radius: 10px;
+$button-border-radius: $base-border-radius;
+
+$button-large-font-size: $font-size-large;
+$positive: #e91d25;
+$button-positive-bg:              $positive !default;
+$button-positive-text:            #fff !default;
+$button-positive-border:          darken($positive, 15%) !default;
+$button-positive-active-bg:       darken($positive, 15%) !default;
+$button-positive-active-border:   darken($positive, 15%) !default;
+
+$main-background: #8b0003;
+
+$savemart-logo: url("../img/SaveSmartLogo-ForKiosk.png") 25px 0px no-repeat transparent;
+$savemart-background: url("../img/SaveSmart-Background.jpg") no-repeat center bottom fixed;
+$savemart-main-txt-color: white;
+
+$lucky-logo: url("../img/LuckYouogo-ForKiosk.png") 25px 10px no-repeat transparent;
+$lucky-background: url("../img/LuckYou-Signup-Background.jpg") no-repeat center bottom fixed;
+$lucky-main-txt-color: #444;

@@ -1,0 +1,10 @@
+{
+  "name": "savemart_enrollment",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.0.0-beta.13",
+    "angular-cache": "~3.1.1",
+    "lodash": "~2.4.1",
+    "angular-ui-utils": "~0.1.1"
+  }
+}

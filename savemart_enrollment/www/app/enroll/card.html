@@ -1,0 +1,24 @@
+<form id="enrollForm" name="enrollForm" novalidate ng-submit="submit()" class="enroll-card-form" action="">
+	<div class="list">
+		<label class="item item-input">
+			<input type="tel" name="cardNumber" ng-model="enrollInfo.SRCardIDtmp" placeholder="Enter 11 Digit Card Number" required ui-mask="44099999999" server-validate/>
+	  	</label>
+	  	<span class="help-block" ng-show="showInvalid && enrollForm.cardNumber.$error.required">This field is required</span>
+	  	<span class="help-block" ng-show="showInvalid && enrollForm.cardNumber.$error.mask">Card number format is not valid</span>
+	  	<span class="help-block" ng-if="enrollForm.cardNumber.$error.server">{{e_msges.cardNumber}}</span>
+	</div>
+	<div class="list">
+		<label class="item item-input">
+			<input type ="tel" name="confirmCardNumber" ng-model="enrollInfo.ConfirmCardNumber" placeholder="Confirm 11 Digit Card Number"  ui-mask="44099999999" required match="enrollInfo.SRCardIDtmp" card="true"/>
+	  	</label>		
+	  	<span class="help-block" ng-show="showInvalid && enrollForm.confirmCardNumber.$error.required">This field is required</span>
+		<span class="help-block" ng-show="showInvalid && enrollForm.confirmCardNumber.$error.match">Card numbers do not match</span>
+	</div>
+	<!-- End list -->
+	<div class="row button-group">
+		<div class="col right">
+			<button type="button" class="button button-stable" ng-click="back()">Back</button>
+			<button type="submit" class="button button-stable" type="submit" ng-disabled="enrollForm.$invalid">Next</button>
+		</div>
+	</div>
+</form>

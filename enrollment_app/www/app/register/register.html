@@ -1,0 +1,64 @@
+<ion-view title="Create Account" id="Register">
+	<ion-content class="has-header">
+		<div ng-if="step == '1'">
+			<form id="registerForm" name="registerForm" novalidate ng-submit="submit(registerForm)">
+				<div class="list">
+					<label class="item item-input">
+						<input type="text" placeholder="Email" name="username" ng-model="user.Email" required server-validate  autocapitalize="off" ng-pattern="emailRegx"/>
+						<span class="help-block" ng-show="showInvalid && registerForm.username.$error.required">This field is required</span>
+						<span class="help-block" ng-show="registerForm.username.$error.pattern || registerForm.username.$error.email">That is not valid email</span>
+		  				<span class="help-block" ng-if="registerForm.username.$error.server">{{e_msges.username}}</span>
+				  	</label>
+				  	<label class="item item-input">
+						<input name="password" type="password" placeholder="Password" ng-model="user.Password" required ng-pattern="passwordRegx" />
+						<span class="help-block" ng-show="showInvalid && registerForm.password.$error.required">This field is required</span>
+						<span class="help-block" ng-show="registerForm.password.$error.pattern">6-12 characters long and include at least one letter and one number</span>
+				  	</label>
+				  	<label class="item item-input">
+						<input name="retypepassword" type="password" placeholder="Retype Password" ng-model="user.RetypePassword" required match="user.Password">
+						<span class="help-block" ng-show="showInvalid && registerForm.retypepassword.$error.required">This field is required</span>
+						<span class="help-block" ng-show="registerForm.retypepassword.$error.match">Passwords do not match</span>
+				  	</label>
+				  	<label class="item item-input">
+						<input name="firstname" type="text" placeholder="First Name" ng-model="user.FirstName" required ng-pattern="nameRegx"/>
+						<span class="help-block" ng-show="showInvalid && registerForm.firstname.$error.required">This field is required</span>
+						<span class="help-block" ng-show="registerForm.firstname.$error.pattern">This field dose not allow special characters</span>
+				  	</label>
+				  	<label class="item item-input">
+						<input name="middlename" type="text" placeholder="Middle Name" ng-model="user.MiddleName" ng-pattern="nameRegx"/>
+						<span class="help-block" ng-show="registerForm.middlename.$error.pattern">This field dose not allow special characters</span>
+					</label>
+				  	<label class="item item-input">
+						<input name="lastname" type="text" placeholder="Last Name" ng-model="user.LastName" required ng-pattern="nameRegx"/>
+						<span class="help-block" ng-show="showInvalid && registerForm.lastname.$error.required">This field is required</span>
+						<span class="help-block" ng-show="registerForm.lastname.$error.pattern">This field dose not allow special characters</span>
+				  	</label>
+				  	<label class="item item-input">
+						<input name="phone" type="tel" uiMaskPlaceholder placeholder="Primary Phone Number" ng-model="user.Phone" ui-mask="999-999-9999" required server-validate/>
+						<span class="help-block" ng-show="showInvalid && registerForm.phone.$error.required">This field is required</span>
+						<span class="help-block" ng-if="registerForm.phone.$error.server">{{e_msges.phone}}</span>
+						<ion-checkbox ng-model="user.PhoneIsCellPhone">This is a Mobile number</ion-checkbox>
+				  	</label>
+				  	<label class="item item-input item-icon-right">
+				  		<input name="storeid" type="hidden" ng-model="user.StoreID" required>
+				  		<div ng-class="{placehoder: !chooseStore.StoreID}" ng-if="!chooseStore.StoreID">Select Preferred Store</div>
+				  		<div ng-if="user.StoreID">{{chooseStore.StoreName}}<br/>{{chooseStore.Address1}}, {{chooseStore.City}} {{chooseStore.State}}<br/>{{chooseStore.Zipcode}}</div>
+						<i class="icon ion-aquo-right"></i>
+						<span class="help-block" ng-show="showInvalid && registerForm.storeid.$error.required">This field is required</span>
+				  	</label>
+				</div>
+				<div class="row" >	
+					<div class="col center">
+						<!-- ng-disabled="registerForm.$invalid"-->
+						<button class="button button-long button-positive" type="submit" ng-disabled="registerForm.$invalid">
+							Continue
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div ng-if="step == '2'">
+    		<div class="slide-animate" ng-include="'app/register/confirmcard.html'"></div>
+		</div>
+	</ion-content>
+</ion-view>

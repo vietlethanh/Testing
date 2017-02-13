@@ -1,0 +1,45 @@
+.app-cardmode{
+	button.button-large{
+		line-height: 26px;
+		padding-bottom: 5px;
+		padding-top: 5px;
+	}
+}
+.store-search-form{
+	.item-input-inset .item-input-wrapper input{
+		padding-left: 4px;
+		height: 40px;
+		background: transparent;
+		line-height: 20px;
+		width: 100%;
+	}
+}
+#StoreLocator{
+	.store-search-form{
+		.button, input{
+			color: $secondbar_btn_text_color;
+		}
+		label, input {
+			background: $secondbar_bg;
+		}
+	}
+	label, input {
+		background: $secondbar_bg;
+	}
+	label {
+		border-left: 1px solid $secondbar_btn_text_color;
+	}
+	input {
+		border: 1px solid $secondbar_btn_text_color;
+	}
+	.store-list{
+		.image {
+			img {
+				margin-left: inherit;
+				margin-top: 10px;
+				margin-bottom: 5px;
+
+			}
+		}
+	}
+}

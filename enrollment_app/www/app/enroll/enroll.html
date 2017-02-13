@@ -1,0 +1,46 @@
+<ion-view title="Choose Store">
+	<ion-content class="has-header">
+		<div ng-if="tab=='banner'" class="banner">
+			<div class="row responsive-sm">
+				<div class="col col-20"></div>
+				<div class="col" ng-repeat="banner in banners">
+					<button type="button" class="button button-block button-large button-stable" ng-click="selectBanner(banner.BannerId)">{{banner.Name}}</button>
+				</div>
+				<div class="col col-20"></div>
+			</div>
+		</div>
+		<div ng-if="tab=='store'">
+	  		<form novalidate class="store-search-form" ng-submit="searchStore()">
+		  		<div class="list">
+		  			<div class="item item-input-inset">
+		  				<button type="button" ng-click="back()" class="button icon-left ion-chevron-left button-clear button-dark">Back</button>
+						<label class="item-input-wrapper">
+							<input type="text" placeholder="City, Zip or Store Number" ng-model="sc.keyword"/>
+						</label>
+			  		</div>
+		  		</div>
+	  		</form>	
+			<ul class="list">
+				<li class="item store-list" ng-repeat="store in stores" >
+					<div class="row">
+						<div class="col image">
+							<img ng-src="{{getLogo(store)}}"/>
+							<div>Store number: {{store.StoreID}}</div>
+							<div>{{store.Address1}}</div>
+							<div ng-if="store.Address2">{{store.Address2}}</div>
+							<div>{{store.City}}, {{store.State}} {{store.Zipcode}}</div>
+						</div>
+						<div class="col info">
+							<button class="button button-small  button-positive" ng-click="store.selectStore(store)">
+								Select Store
+							</button>
+						</div>
+					</div>
+				</li>
+				<li class="item store-list noitems" ng-if="stores && stores.length == 0">
+					No results found.
+				</li>
+			</ul>
+		</div>
+	</ion-content>
+</ion-view>

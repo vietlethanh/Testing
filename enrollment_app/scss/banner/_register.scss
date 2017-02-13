@@ -1,0 +1,48 @@
+#registerForm, #editForm, #confirmcard {
+	.item-checkbox{
+		
+		color: #929497;
+		border: none;
+		margin: 0px;
+		padding: 5px 0 5px 35px;
+		font-size: 12px;
+		width: 100%;
+		.checkbox {
+			left: 0px;
+			margin-top: -22px;
+			.checkbox-icon {
+				width: 20px;
+				height: 20px;
+			}
+			.checkbox-icon:before {
+				border-color: #929497;
+				border-radius: 2px;
+				border-width: 2px;
+			}
+			.checkbox-icon:after {
+				top: 25%;
+				left: 18%;
+				width: 12px;
+				border-width: 3px;
+			}
+			input:checked:before, input:checked + .checkbox-icon:before {
+				background: white;
+			}
+			.checkbox input:after, .checkbox-icon:after {
+				border-color: #929497;
+			}
+		}
+		.item-content {
+			color: #929497;
+		}
+	}
+	.footer-message{
+		text-align: center;
+		span.message{
+			a{
+				text-decoration: none; color: #48c7f5;
+			}
+		}
+
+	}
+}

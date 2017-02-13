@@ -1,0 +1,53 @@
+<ion-view id="StoreLocator" class="storelocatorPage {{storeBannerClass}} pane">
+	<ion-content class="has-header">
+		<div ng-if="tab=='banner'">
+			<div class="row">
+				<div class="col col-20"></div>
+				<div class="col" ng-repeat="banner in banners">
+					<button type="button" class="button button-block button-large button-stable" ng-click="selectBanner(banner.BannerId)">{{banner.Name}}</button>
+				</div>
+				<div class="col col-20"></div>
+			</div>
+		</div>
+		<div ng-if="tab=='store'">
+	  		<form novalidate class="store-search-form" ng-submit="searchStore()">
+		  		<div class="list">
+		  			<div class="item item-input-inset">
+		  				<button type="button" ng-click="back()" class="button icon-left ion-chevron-left button-clear button-dark">Back</button>
+		  				<!--
+						<button ng-click="nearBy()" class="button button-nearby icon-left mcm-icon-nearby" type="button">Nearby</button>
+						-->
+						<label class="item-input-wrapper">
+							<input type="text" placeholder="City, Zip or Store Number" ng-model="sc.keyword"/>
+						</label>
+						<button class="button icon-left ion-search" type="submit">Search</button>
+			  		</div>
+		  		</div>
+	  		</form>	
+			<div class="list store-list" ng-if="mode == 'list'">
+				<div class="row" ng-repeat="stores in storeGrid">
+					<div class="item store-item col" ng-repeat="store in stores" >
+						<div class="row">
+							<div class="col image">
+								<img ng-src="{{getLogo(store)}}"/>
+								<div>Store number: {{store.StoreID}}</div>
+								<div>{{store.Address1}}</div>
+								<div ng-if="store.Address2">{{store.Address2}}</div>
+								<div>{{store.City}}, {{store.State}} {{store.Zipcode}}</div>
+								<div>Phone: <a href="tel:{{store.PhoneNumber}}">{{store.PhoneNumber}}</a></div>
+								<button type="button" class="button button-small  button-positive" ng-click="store.selectStore(store)">
+									Select Store
+								</button>
+							</div>
+						</div>
+					</div>
+				</div> <!-- row-->
+				<div class="item store-list noitems" ng-if="stores && stores.length == 0">
+					No results found.
+				</div>
+
+			</div>
+		</div>
+		
+  	</ion-content>
+</ion-view>

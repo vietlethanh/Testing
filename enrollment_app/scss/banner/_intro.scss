@@ -1,0 +1,23 @@
+#Intro {
+	.slider-pager .slider-pager-page {
+		color: $luck_red;
+	}
+}
+#Terms, #PP {
+	h1 {
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+	}
+	h2 {
+		font-size: 16px;
+		font-weight: bold;
+	}
+	ol {
+		list-style:decimal;
+		padding-left: 20px;
+	}
+	.dcontent {
+		margin: 10px;
+	}
+}

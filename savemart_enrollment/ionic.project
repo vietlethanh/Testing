@@ -1,0 +1,8 @@
+{
+  "name": "savemart_enrollment",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ]
+}

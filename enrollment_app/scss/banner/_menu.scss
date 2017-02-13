@@ -1,0 +1,129 @@
+
+.icon-menu-home:before{
+	content: url('../img/menu-home.png');
+}
+.icon-menu-weeklyad:before{
+	content: url('../img/menu-weeklyad.png');
+}
+.icon-menu-sr:before{
+	content: url('../img/menu-sr.png');
+}
+.icon-menu-dc:before{
+	content: url('../img/menu-dc.png');
+}
+.icon-menu-dc:before{
+	content: url('../img/menu-dc.png');
+}
+.icon-menu-shoppinglist:before{
+	content: url('../img/menu-shoppinglist.png');
+}
+.icon-menu-recipe:before{
+	content: url('../img/menu-recipe.png');
+}
+.icon-menu-recipebox:before{
+	content: url('../img/menu-recipebox.png');
+}
+.icon-menu-storelocator:before{
+	content: url('../img/menu-storelocator.png');
+}
+.icon-menu-login:before{
+	content: url('../img/menu-login.png');
+}
+.icon-menu-search:before{
+	content: url('../img/menu-search.png');
+}
+.icon-menu-fullstie:before{
+	content: url('../img/menu-fullsite.png');
+}
+.icon-menu-info:before{
+	font-size: 28px;
+}
+
+.menu {
+	ion-content {
+		padding-top: $bar-height;
+	}
+	.header {
+	}
+	.icon:before {
+		display: block;
+		margin-right: 10px;
+		float: left;
+	}
+	.item-content{
+		line-height: 29px;
+		font-size: 20px;
+		padding: 2px 20px 5px 20px;
+		background: $menu_bg;
+		color: black;
+	}
+	.item {
+		border: none;
+	}
+	.footer {
+		background: $mainbar_bg;
+		/*
+		position: absolute;
+		bottom: 0px;
+		*/
+	}
+	
+}
+.back-button i:before {
+	margin-left: 3px;
+	margin-right: 4px
+}
+
+
+/* backdrop side menu */
+
+ion-side-menus.view {
+	-webkit-transition-property: background;
+	-webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: linear;
+}
+ion-pane.menu-content {
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: linear;
+}
+
+body.menu-open {
+	ion-side-menus.view {
+		background: black;
+	}
+	ion-pane.menu-content {
+		opacity: 0.7;
+	}
+}
+.bar.bar-footer {
+	padding: 0px;
+	background: transparent;
+	width: 100%;
+	height: 91px;
+	border-top: 2px solid black;
+	.list {
+		width: 100%;
+		background: url('../img/menu-info-bg.png') 0 0 no-repeat;
+		.item, .item-content {
+			height: 91px;
+			background: transparent;
+		}
+	}
+}
+.main-menu {
+	padding-bottom: 91px;
+	.bottom-space {
+		height: $bar-height;
+	}
+}
+.has-footer {
+	bottom: 91px;
+}
+
+.platform-ios.platform-cordova {
+	.has-footer{
+		top: $ios-statusbar-height;
+	}
+}
+

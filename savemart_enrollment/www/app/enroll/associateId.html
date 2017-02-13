@@ -1,0 +1,16 @@
+<form id="enrollForm" name="enrollForm" novalidate ng-submit="getCardDemographic()" action="">
+	<div class="list">
+	  	<label class="item item-input">
+			<input type="tel" name="associateId" ng-model="enrollInfo.AssociateId" placeholder="Enter Your Associate ID Number" required server-validate/>
+	  	</label>
+	  	<span class="help-block" ng-show="showInvalid && enrollForm.associateId.$error.required">This field is required</span>
+	  	<span class="help-block" ng-show="showInvalid && enrollForm.associateId.$error.mask">Associate ID Number is invalid</span>
+	  	<span class="help-block" ng-if=" enrollForm.associateId.$error.server">{{e_msges.associateId}}</span>
+	</div>
+	<div class="row button-group">
+		<div class="col right">
+			<button type="button" class="button button-stable" ng-click="back()">Back</button>
+			<button type="submit" class="button button-stable" ng-disabled="enrollForm.$invalid">Next</button>
+		</div>
+	</div>
+</form>

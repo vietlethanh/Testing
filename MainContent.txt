@@ -7,3 +7,5 @@
 b rebase 1 2 3 4 5 6
 
 Conflic 1
+
+Conflic 2

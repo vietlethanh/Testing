@@ -4,4 +4,4 @@
 4.Master 1:01 PM
 5. Conflic branhc
 
-b rebase 1 2 3
+b rebase 1 2 3 4
